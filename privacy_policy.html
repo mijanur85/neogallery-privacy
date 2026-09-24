@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Privacy Policy - NeoGallery</title>
+    <title>Privacy Policy - Neo Gallery (com.neogallery.app)</title>
     <style>
         :root {
             --primary: #2563eb;
@@ -31,7 +31,7 @@
         }
 
         .container {
-            max-width: 820px;
+            max-width: 840px;
             margin: 0 auto;
             background: var(--bg-card);
             border-radius: 16px;
@@ -49,7 +49,7 @@
         .header {
             border-bottom: 2px solid var(--border-color);
             padding-bottom: 24px;
-            margin-bottom: 32px;
+            margin-bottom: 28px;
         }
 
         .app-badge {
@@ -77,28 +77,46 @@
             color: var(--text-muted);
         }
 
+        .info-card {
+            background: #f1f5f9;
+            border-left: 4px solid var(--primary);
+            border-radius: 8px;
+            padding: 16px 20px;
+            margin: 24px 0;
+            font-size: 14px;
+        }
+
+        .info-card p {
+            margin: 4px 0;
+        }
+
         h2 {
-            font-size: 19px;
+            font-size: 20px;
             font-weight: 700;
-            color: #111827;
+            color: #0f172a;
             margin-top: 32px;
             margin-bottom: 12px;
-            display: flex;
-            align-items: center;
-            gap: 8px;
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 8px;
         }
 
-        p {
-            margin-bottom: 14px;
+        h3 {
+            font-size: 16px;
+            font-weight: 600;
+            color: #1e293b;
+            margin-top: 18px;
+            margin-bottom: 8px;
+        }
+
+        p, li {
             color: var(--text-muted);
             font-size: 15px;
+            margin-bottom: 12px;
         }
 
-        ul {
-            margin-left: 20px;
+        ul, ol {
+            padding-left: 24px;
             margin-bottom: 16px;
-            color: var(--text-muted);
-            font-size: 15px;
         }
 
         li {
@@ -109,28 +127,40 @@
             color: var(--text-main);
         }
 
-        .highlight-box {
-            background-color: #f1f5f9;
-            border-left: 4px solid var(--primary);
-            padding: 16px 20px;
-            border-radius: 8px;
-            margin: 20px 0;
-            font-size: 14.5px;
-        }
-
-        .highlight-box p {
-            margin: 0;
-            color: #334155;
+        code {
+            background: #e2e8f0;
+            padding: 2px 6px;
+            border-radius: 4px;
+            font-size: 13px;
+            color: #0f172a;
         }
 
         a {
             color: var(--primary);
             text-decoration: none;
-            word-break: break-all;
         }
 
         a:hover {
             text-decoration: underline;
+        }
+
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin: 20px 0;
+            font-size: 14px;
+        }
+
+        th, td {
+            border: 1px solid var(--border-color);
+            padding: 12px;
+            text-align: left;
+        }
+
+        th {
+            background: #f8fafc;
+            color: var(--text-main);
+            font-weight: 600;
         }
 
         .footer {
@@ -152,90 +182,133 @@
         <div class="meta">Effective Date: September 2026 &bull; Last Updated: September 2026</div>
     </div>
 
-    <div class="app-info-card" style="background: rgba(56, 189, 248, 0.08); border: 1px solid rgba(56, 189, 248, 0.25); border-radius: 12px; padding: 18px; margin: 20px 0;">
-        <h3 style="margin: 0 0 10px 0; color: #38bdf8; font-size: 16px;">Application Details</h3>
-        <p style="margin: 4px 0;"><strong>Application Name:</strong> Neo Gallery (NeoGallery)</p>
-        <p style="margin: 4px 0;"><strong>Package Name (Application ID):</strong> <code>com.neogallery.app</code></p>
-        <p style="margin: 4px 0;"><strong>Publisher / Developer:</strong> Neo Gallery Team</p>
-        <p style="margin: 4px 0;"><strong>Official Policy URL:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/" target="_blank" rel="noopener">https://mijanur85.github.io/neogallery-privacy/</a></p>
-        <p style="margin: 4px 0;"><strong>Data / Account Deletion URL:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html" target="_blank" rel="noopener">https://mijanur85.github.io/neogallery-privacy/delete-data.html</a></p>
+    <!-- Application Details Card for Automated Scanners and Store Verification -->
+    <div class="info-card">
+        <h3 style="margin-top:0; color: var(--primary);">Application Information</h3>
+        <p><strong>Application Name:</strong> Neo Gallery (NeoGallery)</p>
+        <p><strong>Package Name (Application ID):</strong> <code>com.neogallery.app</code></p>
+        <p><strong>Developer / Organization:</strong> Neo Gallery Team</p>
+        <p><strong>Contact Email:</strong> <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a></p>
+        <p><strong>Official Privacy Policy URL:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/">https://mijanur85.github.io/neogallery-privacy/</a></p>
+        <p><strong>User Data & Account Deletion URL:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html">https://mijanur85.github.io/neogallery-privacy/delete-data.html</a></p>
     </div>
 
-    <div class="highlight-box">
-        <p><strong>Executive Summary:</strong> Neo Gallery (<code>com.neogallery.app</code>) is designed with a strict privacy-first architecture. All your photos, videos, and private vault files remain strictly on your local device. We do not operate remote servers to host, inspect, transmit, or monetize your personal media files.</p>
-    </div>
+    <p><strong>Executive Summary:</strong> Neo Gallery (<code>com.neogallery.app</code>) is an offline-first mobile photo and video gallery application. We strictly respect your privacy. All your personal photos, videos, and private vault files remain exclusively on your local device. We do not operate remote servers to host, inspect, transmit, or monetize your personal media files.</p>
 
     <h2>1. Information We Collect</h2>
-    <p>Neo Gallery (<code>com.neogallery.app</code>) does <strong>NOT</strong> collect, harvest, transmit, or store any personal data or personally identifiable information (PII) on any external server. The application functions entirely offline on your device for all core photo viewing, management, and private vault features.</p>
+    <p>Neo Gallery does <strong>NOT</strong> collect, harvest, transmit, or store any personal data or personally identifiable information (PII) on any external server. The application functions entirely offline on your device for all core gallery and media management features.</p>
+    <ul>
+        <li><strong>No Personal Media Collection:</strong> Your personal photos, videos, and albums are stored on your device only. We never access, upload, or transmit your media to our servers or any third-party cloud.</li>
+        <li><strong>No Account Information:</strong> Neo Gallery does not require, offer, or support user account registration, login credentials, or cloud profile storage.</li>
+    </ul>
 
     <h2>2. Device Permissions and How They Are Used</h2>
-    <p>To provide high-performance gallery and media management features, NeoGallery requests access to certain device capabilities in accordance with Google Play Developer policies:</p>
+    <p>To provide high-performance gallery and media management features, Neo Gallery requests access to certain device capabilities in accordance with Google Play Developer policies:</p>
     <ul>
-        <li><strong>Photos & Videos (READ_MEDIA_IMAGES, READ_MEDIA_VIDEO):</strong> Required on Android 13+ to display and organize photos and videos stored locally on your device. Media files are read solely for rendering thumbnails, fullscreen viewing, and local management.</li>
-        <li><strong>Selected Photos Access (READ_MEDIA_VISUAL_USER_SELECTED):</strong> Supported on Android 14+ to allow users to grant partial or selective media access.</li>
-        <li><strong>Storage Access (READ_EXTERNAL_STORAGE, WRITE_EXTERNAL_STORAGE):</strong> Used strictly on Android 12 and older devices to read device media and save user-edited photos to your device's <code>Pictures</code> directory.</li>
-        <li><strong>Biometric Authentication (USE_BIOMETRIC):</strong> Used exclusively to unlock the Private Vault using fingerprint or face authentication. Biometric validation is processed entirely by the secure Android system keystore. NeoGallery never accesses or stores your raw biometric data.</li>
-        <li><strong>Wallpaper Setting (SET_WALLPAPER):</strong> Used only when you explicitly select "Set as Wallpaper" from the photo viewer menu.</li>
-        <li><strong>Network Permissions (INTERNET, ACCESS_NETWORK_STATE):</strong> Required solely by Google AdMob and Google Play Billing to fetch advertisements for free users and process premium in-app subscriptions.</li>
+        <li><strong>Photos & Videos (<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>):</strong> Required on Android 13+ to display and organize photos and videos stored locally on your device. Media files are read solely for rendering thumbnails, fullscreen viewing, and local management.</li>
+        <li><strong>Selected Photos Access (<code>READ_MEDIA_VISUAL_USER_SELECTED</code>):</strong> Supported on Android 14+ to allow users to grant partial or selective media access.</li>
+        <li><strong>Storage Access (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>):</strong> Used strictly on Android 12 and older devices (with <code>maxSdkVersion</code> constraints) to read device media and save user-edited photos to your device's <code>Pictures</code> directory.</li>
+        <li><strong>Biometric Authentication (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>):</strong> Used exclusively to unlock the Private Vault using fingerprint or face authentication. Biometric validation is processed entirely by the secure Android system keystore. Neo Gallery never accesses or stores your raw biometric data.</li>
+        <li><strong>Wallpaper Setting (<code>SET_WALLPAPER</code>):</strong> Used only when you explicitly choose "Set as Wallpaper" from the photo viewer menu.</li>
+        <li><strong>Network Permissions (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Required solely by Google AdMob, Google Play Billing, and Firebase Crashlytics to display ads for free users, process premium subscriptions, and report technical stability diagnostics.</li>
     </ul>
 
-    <h2>3. Private Vault & Encryption</h2>
-    <p>Items moved to the Private Vault are encrypted locally on your device using AES-256 encryption and placed in internal app-isolated storage. We do not possess master encryption keys and cannot recover your password or encrypted files if forgotten. Please note that uninstalling the application or clearing device storage through Android settings will permanently delete local vault data.</p>
+    <h2>3. Third-Party Data Sharing and Integrated SDKs</h2>
+    <p>To support application development, advertising for free users, crash diagnostics, and secure subscription processing, Neo Gallery integrates verified third-party software development kits (SDKs) provided by Google. The following table provides full transparency into third-party data sharing:</p>
 
-    <h2>4. Crash Reporting, Analytics & Technical Diagnostics</h2>
-    <p>To ensure optimal application stability, fast bug resolution, and smooth performance across thousands of Android device models, NeoGallery integrates <strong>Google Firebase Crashlytics</strong> and <strong>Google Analytics for Firebase</strong>.</p>
+    <table>
+        <thead>
+            <tr>
+                <th>Third-Party Provider & SDK</th>
+                <th>Purpose of Integration</th>
+                <th>Data Shared / Collected</th>
+                <th>Privacy Policy Link</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <td><strong>Google AdMob</strong><br>(Google Mobile Ads SDK)</td>
+                <td>Displaying non-intrusive banner, interstitial, and rewarded ads to free users.</td>
+                <td>Google Advertising ID (AAID), pseudonymous device identifiers, crash logs, diagnostic data, IP address.</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Privacy Policy</a></td>
+            </tr>
+            <tr>
+                <td><strong>Google Firebase Crashlytics & Analytics</strong><br>(Google LLC)</td>
+                <td>Monitoring technical app stability, crash reporting, and diagnosing app crashes across device models.</td>
+                <td>Anonymous stack traces, device model, Android OS version, performance metrics. Zero personal photos or media.</td>
+                <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></td>
+            </tr>
+            <tr>
+                <td><strong>Google Play In-App Billing</strong><br>(Google Play Billing Library v8.0.0+)</td>
+                <td>Processing secure in-app subscriptions (Monthly/Yearly Premium access).</td>
+                <td>Purchase tokens, subscription product IDs, order timestamps. Payment/credit card data is handled 100% by Google.</td>
+                <td><a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google Play Privacy</a></td>
+            </tr>
+            <tr>
+                <td><strong>Google Play In-App Updates & Integrity</strong><br>(Google Play Core SDK)</td>
+                <td>Checking for critical app updates and ensuring binary integrity against tampering.</td>
+                <td>App version code, device integrity attestation tokens.</td>
+                <td><a href="https://developer.android.com/google/play/integrity" target="_blank" rel="noopener">Play Integrity Overview</a></td>
+            </tr>
+            <tr>
+                <td><strong>Google ML Kit Vision</strong><br>(On-Device Subject Segmentation)</td>
+                <td>Powering the AI Background Remover and Cutout features.</td>
+                <td><strong>Zero Data Transmitted:</strong> Operates 100% on-device hardware. No images or photos are ever sent to the cloud.</td>
+                <td><a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">ML Kit Privacy Terms</a></td>
+            </tr>
+        </tbody>
+    </table>
+
+    <h2>4. Google Advertising ID (AAID) Disclosure</h2>
+    <p>Neo Gallery complies strictly with Google Play's Advertising ID Policy:</p>
     <ul>
-        <li><strong>Diagnostic Data Collected:</strong> When an unexpected error or crash occurs, anonymous technical diagnostic information (such as device hardware model, Android OS version, app version, and technical stack traces) is securely transmitted to Google via encrypted HTTPS/TLS.</li>
-        <li><strong>Zero Media or Personal Access:</strong> This technical diagnostic information contains no personally identifiable information (PII), names, email addresses, or phone numbers. Crashlytics has <strong>zero access</strong> to your personal photos, videos, or Private Vault contents.</li>
-        <li><strong>Purpose:</strong> Used strictly to identify and fix technical crashes, monitor app health, and optimize memory usage.</li>
-        <li>For details on Google's privacy protections, please visit the <a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy and Security Documentation</a>.</li>
+        <li><strong>Usage:</strong> Neo Gallery uses the Google Advertising ID (AAID) via the Google Mobile Ads (AdMob) SDK solely for serving non-intrusive ads, frequency capping, aggregated ad reporting, and combating ad fraud.</li>
+        <li><strong>Zero Linkage to Personal Identity:</strong> The Advertising ID is never combined with any personally identifiable information (PII) or personal photos.</li>
+        <li><strong>User Opt-Out & Reset Instructions:</strong> Users have complete control over their Advertising ID. You can reset or delete your Advertising ID at any time through your Android device settings:
+            <ol>
+                <li>Open your device <strong>Settings</strong>.</li>
+                <li>Navigate to <strong>Google</strong> &rarr; <strong>Ads</strong> (or <strong>Privacy</strong> &rarr; <strong>Ads</strong>).</li>
+                <li>Tap <strong>"Reset advertising ID"</strong> or <strong>"Delete advertising ID"</strong>.</li>
+            </ol>
+        </li>
+        <li><strong>Ad-Free Option:</strong> You can completely disable all advertising and Advertising ID processing by upgrading to Neo Gallery Premium.</li>
     </ul>
 
-    <h2>5. Google Play In-App Updates</h2>
-    <p>NeoGallery incorporates the official <strong>Google Play In-App Update API</strong>. This allows the app to communicate directly with Google Play services to check for critical bug fixes, security patches, and new features, enabling you to update seamlessly from within the app without manual searching.</p>
+    <h2>5. Private Vault & On-Device Encryption</h2>
+    <p>Items moved to the Private Vault are encrypted locally on your device using hardware-backed AES-256 encryption and stored in internal app-isolated storage. We do not possess master encryption keys and cannot recover your password or encrypted files if forgotten. Please note that uninstalling the application or clearing device storage through Android settings will permanently delete local vault data.</p>
 
-    <h2>6. Third-Party Services and Advertising</h2>
-    <p>NeoGallery incorporates Google Mobile Ads (AdMob) to display non-intrusive advertisements to users who do not have an active Premium subscription. Third-party advertising partners, including Google, may collect pseudonymous device identifiers, diagnostic information, and advertising identifiers (AAID) in accordance with applicable data privacy laws.</p>
+    <h2>6. Account Deletion and User Data Deletion Instructions</h2>
+    <p><strong>Account Deletion Notice:</strong> Neo Gallery (<code>com.neogallery.app</code>) does <strong>NOT</strong> require, offer, or allow user account creation. The application operates 100% offline for photo management without user accounts, logins, usernames, or cloud-based profiles. Because no remote accounts exist, there is no remote account to delete.</p>
+
+    <p><strong>Step-by-Step Instructions to Delete All User Data:</strong></p>
+    <ol>
+        <li><strong>Step 1 (In-App & Device Storage Deletion):</strong> On your Android device, open <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>Neo Gallery</strong> &rarr; <strong>Storage & Cache</strong> &rarr; tap <strong>"Clear Storage" / "Clear Data"</strong>. This permanently purges all on-device database records, cached thumbnails, favorites, and encrypted vault files.</li>
+        <li><strong>Step 2 (Complete Removal):</strong> Uninstall Neo Gallery from your device. This automatically deletes the isolated sandbox storage directory and all associated app data.</li>
+        <li><strong>Step 3 (Web-Based Data Deletion Request Without App Installation):</strong> If you have ever contacted our customer support team or submitted any inquiries, and wish to request the permanent deletion of your support correspondence and email records, you can submit a deletion request via our dedicated Web Portal at:
+            <br>
+            👉 <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html" target="_blank" rel="noopener"><strong>https://mijanur85.github.io/neogallery-privacy/delete-data.html</strong></a>
+            <br>
+            Or send an email directly to <a href="mailto:neogallery.support@gmail.com?subject=Account%2FData%20Deletion%20Request">neogallery.support@gmail.com</a> with the subject line <em>"Data Deletion Request"</em>. All requests are processed within <strong>48 to 72 hours</strong>.
+        </li>
+    </ol>
+
+    <h2>7. Children's Privacy</h2>
+    <p>Neo Gallery is intended for general audiences aged 13 and above. We do not knowingly collect personal information from children under the age of 13. If you believe that a child has provided personal information to us, please contact us at <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a> so we can take immediate corrective action.</p>
+
+    <h2>8. Security Safeguards</h2>
+    <p>We implement industry-standard cryptographic techniques to safeguard private files within the on-device Vault. Communication between integrated Google SDKs (Google Play Billing, AdMob) and Google servers is strictly encrypted via HTTPS/TLS protocols.</p>
+
+    <h2>9. Contact Us</h2>
+    <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy or wish to exercise your data privacy rights, please contact our support team:</p>
     <ul>
-        <li>For more information on how Google collects and processes advertising data, please review <a href="https://policies.google.com/privacy" target="_blank" rel="noopener">Google's Privacy Policy</a> and <a href="https://policies.google.com/technologies/ads" target="_blank" rel="noopener">How Google uses information from sites or apps that use their services</a>.</li>
-        <li><strong>European Economic Area (EEA) & UK Users:</strong> In compliance with GDPR and Google consent requirements, European users are presented with a User Messaging Platform (UMP) consent dialog to manage consent preferences for personalized or non-personalized advertising.</li>
-        <li><strong>Ad-Free Option:</strong> Users can disable all advertisements permanently or by subscription through our Google Play In-App Billing options.</li>
-    </ul>
-
-    <h2>7. In-App Purchases and Billing</h2>
-    <p>All financial transactions, monthly/yearly subscriptions, and purchases are processed securely by <strong>Google Play In-App Billing</strong>. NeoGallery does not collect, process, or store credit card details or financial information.</p>
-
-    <h2>8. Children's Privacy</h2>
-    <p>NeoGallery is intended for general audiences aged 13 and above. We do not knowingly collect personal information from children under the age of 13. If you believe that a child has provided personal information through our services, please contact us immediately so we can take appropriate action.</p>
-
-    <h2>9. Account Creation, User Data & Account Deletion Policy</h2>
-    <p><strong>No Account Creation:</strong> Neo Gallery (<code>com.neogallery.app</code>) is built on an offline-first, local-storage architecture. The application does <strong>NOT</strong> offer, require, or support user account registration, user credentials, login screens, or cloud-based profiles. Users are never asked to create an account, register an email address, or provide passwords.</p>
-    
-    <p><strong>Account Deletion Notice:</strong> Because Neo Gallery does not create, maintain, or store user accounts on any remote server or cloud database, there is no remote account to delete.</p>
-
-    <p><strong>How Users Can Delete Their Local Data:</strong> All user-generated content, app preferences, album structures, and encrypted Private Vault files are stored strictly on the user's local physical device. Users can delete all application data at any time through:</p>
-    <ul>
-        <li><strong>In-Device Deletion:</strong> Go to <em>Settings &rarr; Apps &rarr; Neo Gallery &rarr; Storage & Cache &rarr; Clear Storage / Clear Data</em>. This will immediately and permanently erase all local application preferences, cache, and vault files.</li>
-        <li><strong>Uninstalling the App:</strong> Uninstalling Neo Gallery from your device immediately purges all app-isolated private sandbox files, databases, and cached thumbnails.</li>
-        <li><strong>Web-based Data Deletion Request (Without App Installation):</strong> If you have communicated with our support team or submitted any inquiries, or if you require data deletion verification without installing the app, you can request immediate data deletion through our dedicated Web Deletion Portal at <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html" target="_blank" rel="noopener">https://mijanur85.github.io/neogallery-privacy/delete-data.html</a> or by sending an email to <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a>. Requests are fulfilled within 48 to 72 hours.</li>
-    </ul>
-
-    <h2>10. Security Safeguards</h2>
-    <p>We implement industry-standard cryptographic techniques to safeguard private files within the on-device Vault. Communication between third-party SDKs (Google Play Billing, AdMob) and Google servers is strictly encrypted via HTTPS/TLS protocols.</p>
-
-    <h2>11. Changes to This Privacy Policy</h2>
-    <p>We may update this Privacy Policy from time to time to reflect operational, legal, or regulatory requirements. Any updates will be posted on this page with an updated revision date.</p>
-
-    <h2>12. Contact Us</h2>
-    <p>If you have any questions, suggestions, or concerns regarding this Privacy Policy, please contact our support team:</p>
-    <ul>
-        <li><strong>Email:</strong> <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a></li>
+        <li><strong>Contact Email:</strong> <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a></li>
         <li><strong>Official Website:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/" target="_blank" rel="noopener">https://mijanur85.github.io/neogallery-privacy/</a></li>
-        <li><strong>App:</strong> NeoGallery on Google Play</li>
+        <li><strong>Data Deletion Portal:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html" target="_blank" rel="noopener">https://mijanur85.github.io/neogallery-privacy/delete-data.html</a></li>
+        <li><strong>Application:</strong> Neo Gallery (<code>com.neogallery.app</code>) on Google Play</li>
     </ul>
 
     <div class="footer">
-        &copy; 2026 NeoGallery. All rights reserved.
+        &copy; 2026 Neo Gallery (com.neogallery.app). All rights reserved.
     </div>
 </div>
 
