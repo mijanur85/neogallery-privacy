@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Data & Account Deletion Request - Neo Gallery</title>
+    <style>
+        :root {
+            --bg-color: #0b0f19;
+            --surface-color: #151d30;
+            --text-primary: #f8fafc;
+            --text-secondary: #94a3b8;
+            --accent-color: #38bdf8;
+            --border-color: #1e293b;
+        }
+
+        body {
+            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
+            background-color: var(--bg-color);
+            color: var(--text-primary);
+            margin: 0;
+            padding: 40px 20px;
+            display: flex;
+            justify-content: center;
+        }
+
+        .container {
+            max-width: 780px;
+            width: 100%;
+            background-color: var(--surface-color);
+            border-radius: 16px;
+            border: 1px solid var(--border-color);
+            padding: 40px;
+            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
+        }
+
+        .header {
+            border-bottom: 1px solid var(--border-color);
+            padding-bottom: 24px;
+            margin-bottom: 28px;
+        }
+
+        .app-badge {
+            display: inline-block;
+            background: rgba(56, 189, 248, 0.1);
+            color: var(--accent-color);
+            padding: 6px 14px;
+            border-radius: 9999px;
+            font-size: 13px;
+            font-weight: 600;
+            margin-bottom: 12px;
+        }
+
+        h1 {
+            font-size: 28px;
+            margin: 0 0 8px 0;
+            color: #ffffff;
+        }
+
+        .meta {
+            color: var(--text-secondary);
+            font-size: 14px;
+        }
+
+        .card {
+            background: rgba(56, 189, 248, 0.05);
+            border: 1px solid rgba(56, 189, 248, 0.2);
+            border-radius: 12px;
+            padding: 20px;
+            margin: 24px 0;
+        }
+
+        h2 {
+            font-size: 20px;
+            color: var(--accent-color);
+            margin-top: 32px;
+            margin-bottom: 12px;
+        }
+
+        p, li {
+            color: var(--text-secondary);
+            font-size: 15px;
+            line-height: 1.7;
+        }
+
+        strong {
+            color: var(--text-primary);
+        }
+
+        ul {
+            padding-left: 20px;
+        }
+
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
+        }
+
+        a:hover {
+            text-decoration: underline;
+        }
+
+        .btn {
+            display: inline-block;
+            background: var(--accent-color);
+            color: #0b0f19;
+            font-weight: 600;
+            padding: 12px 24px;
+            border-radius: 8px;
+            margin-top: 16px;
+            text-decoration: none;
+        }
+
+        .btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+        .footer {
+            margin-top: 40px;
+            padding-top: 20px;
+            border-top: 1px solid var(--border-color);
+            text-align: center;
+            font-size: 13px;
+            color: #64748b;
+        }
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="header">
+        <span class="app-badge">Data Safety Compliance</span>
+        <h1>Data & Account Deletion Request</h1>
+        <div class="meta">Application: Neo Gallery &bull; Package: <code>com.neogallery.app</code></div>
+    </div>
+
+    <div class="card">
+        <h3 style="margin-top:0; color: #38bdf8;">Notice Regarding User Accounts</h3>
+        <p><strong>Neo Gallery operates entirely without user accounts or server-side logins.</strong> You do not need an account to use the app, and we never collect, store, or transmit your email address, passwords, or personal identity to remote servers.</p>
+    </div>
+
+    <h2>1. What Data Can Be Deleted?</h2>
+    <p>All photos, videos, encrypted vault files, album definitions, and app settings are stored locally on your device:</p>
+    <ul>
+        <li><strong>On-Device Media & Vault Items:</strong> Stored strictly in local device storage and app sandbox.</li>
+        <li><strong>App Settings & Preferences:</strong> Stored locally in Android DataStore.</li>
+        <li><strong>Support / Contact Records:</strong> If you sent an email to customer support, that communication thread may exist in our support mailbox.</li>
+    </ul>
+
+    <h2>2. How to Delete All Data Without Contacting Us</h2>
+    <p>Because your media and settings are stored locally on your phone, you have immediate and permanent control over all data:</p>
+    <ul>
+        <li><strong>Clear All App Data:</strong> Open Android <em>Settings &rarr; Apps &rarr; Neo Gallery &rarr; Storage & Cache &rarr; Clear Storage</em>. This immediately erases all local settings, encrypted vault databases, and cached indices.</li>
+        <li><strong>Uninstall Neo Gallery:</strong> Uninstalling the application completely purges all private application folders and database records from your device.</li>
+    </ul>
+
+    <h2>3. Request Deletion of Support Records (Web Request)</h2>
+    <p>If you have previously contacted our support team and wish to request the complete deletion of any email correspondence, support tickets, or diagnostic crash traces, please email us directly with the subject line <strong>"Data Deletion Request"</strong>:</p>
+
+    <p style="text-align: center; margin: 30px 0;">
+        <a class="btn" href="mailto:neogallery.support@gmail.com?subject=Data%20Deletion%20Request%20-%20Neo%20Gallery%20(com.neogallery.app)">Submit Data Deletion Request via Email</a>
+    </p>
+
+    <h2>4. Response Timeframe</h2>
+    <p>All data deletion inquiries and requests are reviewed and permanently processed within <strong>48 to 72 hours</strong>. We will send a confirmation response once the records have been purged.</p>
+
+    <h2>5. Official Links</h2>
+    <ul>
+        <li><strong>Privacy Policy:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/">https://mijanur85.github.io/neogallery-privacy/</a></li>
+        <li><strong>Google Play Store:</strong> Neo Gallery (<code>com.neogallery.app</code>)</li>
+    </ul>
+
+    <div class="footer">
+        &copy; 2026 Neo Gallery (com.neogallery.app). All rights reserved.
+    </div>
+</div>
+
+</body>
+</html>
