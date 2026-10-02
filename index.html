@@ -196,21 +196,24 @@
     <p><strong>Executive Summary:</strong> Neo Gallery (<code>com.neogallery.app</code>) is an offline-first mobile photo and video gallery application. We strictly respect your privacy. All your personal photos, videos, and private vault files remain exclusively on your local device. We do not operate remote servers to host, inspect, transmit, or monetize your personal media files.</p>
 
     <h2>1. Information We Collect</h2>
-    <p>Neo Gallery does <strong>NOT</strong> collect, harvest, transmit, or store any personal data or personally identifiable information (PII) on any external server. The application functions entirely offline on your device for all core gallery and media management features.</p>
+    <p>Neo Gallery distinguishes strictly between your private personal media and non-personal technical telemetry:</p>
     <ul>
-        <li><strong>No Personal Media Collection:</strong> Your personal photos, videos, and albums are stored on your device only. We never access, upload, or transmit your media to our servers or any third-party cloud.</li>
-        <li><strong>No Account Information:</strong> Neo Gallery does not require, offer, or support user account registration, login credentials, or cloud profile storage.</li>
+        <li><strong>Zero Remote Media Storage:</strong> All your personal photos, videos, album hierarchies, and private vault contents remain 100% locally on your device. We do not operate remote servers to host, inspect, transmit, or monetize your media.</li>
+        <li><strong>No User Account Information:</strong> Neo Gallery does not require, offer, or support user account registration, credentials, login passwords, or cloud-based profiles.</li>
+        <li><strong>Non-Personal Technical Diagnostics:</strong> To ensure high performance, app stability, crash prevention, and Google Play subscription verification, third-party Google SDKs (Google Firebase Crashlytics & Analytics, Google Play Billing, and for free users, Google AdMob) process pseudonymous diagnostic indicators such as device hardware model, Android OS version, crash traces, and the Google Advertising ID (AAID) as detailed below.</li>
     </ul>
 
     <h2>2. Device Permissions and How They Are Used</h2>
     <p>To provide high-performance gallery and media management features, Neo Gallery requests access to certain device capabilities in accordance with Google Play Developer policies:</p>
     <ul>
-        <li><strong>Photos & Videos (<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>):</strong> Required on Android 13+ to display and organize photos and videos stored locally on your device. Media files are read solely for rendering thumbnails, fullscreen viewing, and local management.</li>
-        <li><strong>Selected Photos Access (<code>READ_MEDIA_VISUAL_USER_SELECTED</code>):</strong> Supported on Android 14+ to allow users to grant partial or selective media access.</li>
-        <li><strong>Storage Access (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>):</strong> Used strictly on Android 12 and older devices (with <code>maxSdkVersion</code> constraints) to read device media and save user-edited photos to your device's <code>Pictures</code> directory.</li>
+        <li><strong>Photos & Videos (<code>READ_MEDIA_IMAGES</code>, <code>READ_MEDIA_VIDEO</code>):</strong> Required on Android 13+ (API 33+) to index, display, and organize photos and videos stored locally on your device. Media files are read solely on-device for rendering thumbnails, fullscreen viewing, and local management.</li>
+        <li><strong>Selected Photos Access (<code>READ_MEDIA_VISUAL_USER_SELECTED</code>):</strong> Supported on Android 14+ (API 34+) to allow users to grant partial or selective media access.</li>
+        <li><strong>Storage Access (<code>READ_EXTERNAL_STORAGE</code>, <code>WRITE_EXTERNAL_STORAGE</code>):</strong> Used strictly on Android 12 and older devices (with <code>maxSdkVersion</code> constraints) to read device media and save user-edited photos to your device's <code>Pictures/NeoGallery</code> directory.</li>
+        <li><strong>Notifications (<code>POST_NOTIFICATIONS</code>):</strong> Used on Android 13+ to provide optional status alerts (such as notifying when items in the Recycle Bin are nearing their 30-day permanent deletion threshold or background export completion).</li>
         <li><strong>Biometric Authentication (<code>USE_BIOMETRIC</code>, <code>USE_FINGERPRINT</code>):</strong> Used exclusively to unlock the Private Vault using fingerprint or face authentication. Biometric validation is processed entirely by the secure Android system keystore. Neo Gallery never accesses or stores your raw biometric data.</li>
         <li><strong>Wallpaper Setting (<code>SET_WALLPAPER</code>):</strong> Used only when you explicitly choose "Set as Wallpaper" from the photo viewer menu.</li>
-        <li><strong>Network Permissions (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Required solely by Google AdMob, Google Play Billing, and Firebase Crashlytics to display ads for free users, process premium subscriptions, and report technical stability diagnostics.</li>
+        <li><strong>Network Permissions (<code>INTERNET</code>, <code>ACCESS_NETWORK_STATE</code>):</strong> Required by Google AdMob, Google Play Billing, and Firebase Crashlytics to display ads for free users, process premium subscriptions, and report technical stability diagnostics.</li>
+        <li><strong>System Services (<code>WAKE_LOCK</code>, <code>CHECK_LICENSE</code>, <code>BILLING</code>):</strong> Used to prevent interruptions during long export operations and verify Google Play licensing and subscriptions.</li>
     </ul>
 
     <h2>3. Third-Party Data Sharing and Integrated SDKs</h2>
@@ -235,7 +238,7 @@
             <tr>
                 <td><strong>Google Firebase Crashlytics & Analytics</strong><br>(Google LLC)</td>
                 <td>Monitoring technical app stability, crash reporting, and diagnosing app crashes across device models.</td>
-                <td>Anonymous stack traces, device model, Android OS version, performance metrics. Zero personal photos or media.</td>
+                <td>Pseudonymous App Instance ID, device model, Android OS version, crash stack traces, performance metrics. Data is retained for 90 days (Crashlytics) and up to 14 months (Analytics) under Google's standard schedules. Zero personal photos or media are collected.</td>
                 <td><a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase Privacy Policy</a></td>
             </tr>
             <tr>
@@ -253,42 +256,49 @@
             <tr>
                 <td><strong>Google ML Kit Vision</strong><br>(On-Device Subject Segmentation)</td>
                 <td>Powering the AI Background Remover and Cutout features.</td>
-                <td><strong>Zero Data Transmitted:</strong> Operates 100% on-device hardware. No images or photos are ever sent to the cloud.</td>
+                <td><strong>On-Device Processing:</strong> Subject segmentation AI inference operates 100% locally on device hardware (CPU/GPU/NPU). No user photos are ever sent to external servers. Google Play Services may automatically download and update AI model files via Google servers and log standard Play Services API usage metrics.</td>
                 <td><a href="https://developers.google.com/ml-kit/terms" target="_blank" rel="noopener">ML Kit Privacy Terms</a></td>
             </tr>
         </tbody>
     </table>
 
-    <h2>4. Google Advertising ID (AAID) Disclosure</h2>
+    <h2>4. Google Advertising ID (AAID) & Premium Experience</h2>
     <p>Neo Gallery complies strictly with Google Play's Advertising ID Policy:</p>
     <ul>
         <li><strong>Usage:</strong> Neo Gallery uses the Google Advertising ID (AAID) via the Google Mobile Ads (AdMob) SDK solely for serving non-intrusive ads, frequency capping, aggregated ad reporting, and combating ad fraud.</li>
         <li><strong>Zero Linkage to Personal Identity:</strong> The Advertising ID is never combined with any personally identifiable information (PII) or personal photos.</li>
-        <li><strong>User Opt-Out & Reset Instructions:</strong> Users have complete control over their Advertising ID. You can reset or delete your Advertising ID at any time through your Android device settings:
+        <li><strong>Premium Ad-Free Experience:</strong> Upgrading to Neo Gallery Premium completely disables all AdMob advertising requests and Advertising ID (AAID) processing. Anonymous Firebase Crashlytics diagnostics remain active to ensure app stability.</li>
+        <li><strong>User Opt-Out & Reset Instructions:</strong> Non-premium users have complete control over their Advertising ID. You can reset or delete your Advertising ID at any time through your Android device settings:
             <ol>
                 <li>Open your device <strong>Settings</strong>.</li>
                 <li>Navigate to <strong>Google</strong> &rarr; <strong>Ads</strong> (or <strong>Privacy</strong> &rarr; <strong>Ads</strong>).</li>
                 <li>Tap <strong>"Reset advertising ID"</strong> or <strong>"Delete advertising ID"</strong>.</li>
             </ol>
         </li>
-        <li><strong>Ad-Free Option:</strong> You can completely disable all advertising and Advertising ID processing by upgrading to Neo Gallery Premium.</li>
     </ul>
 
     <h2>5. Private Vault & On-Device Encryption</h2>
-    <p>Items moved to the Private Vault are encrypted locally on your device using hardware-backed AES-256 encryption and stored in internal app-isolated storage. We do not possess master encryption keys and cannot recover your password or encrypted files if forgotten. Please note that uninstalling the application or clearing device storage through Android settings will permanently delete local vault data.</p>
+    <p>Items moved to the Private Vault are encrypted locally on your device using AES-256 encryption. Hardware-backed security (Android Keystore / TEE / StrongBox) is leveraged where supported by the device hardware, with a secure software keystore fallback on unsupported devices. We do not possess master encryption keys and cannot recover your password or encrypted files if forgotten. Please note that uninstalling the application or clearing device storage through Android settings will permanently delete local vault data.</p>
 
-    <h2>6. Account Deletion and User Data Deletion Instructions</h2>
+    <h2>6. Data Retention & Deletion Policy</h2>
     <p><strong>Account Deletion Notice:</strong> Neo Gallery (<code>com.neogallery.app</code>) does <strong>NOT</strong> require, offer, or allow user account creation. The application operates 100% offline for photo management without user accounts, logins, usernames, or cloud-based profiles. Because no remote accounts exist, there is no remote account to delete.</p>
+
+    <p><strong>Data Retention Rules:</strong></p>
+    <ul>
+        <li><strong>Local On-Device Media & Vault:</strong> Retained locally until explicitly deleted by the user, or permanently purged when the user clears app storage or uninstalls the application.</li>
+        <li><strong>Recycle Bin Lifecycle:</strong> Deleted photos and videos moved to the app-managed Recycle Bin are retained for up to 30 days before permanent automatic deletion, unless permanently deleted or restored earlier by the user.</li>
+        <li><strong>Third-Party Telemetry Retention:</strong> Anonymous crash diagnostics in Firebase Crashlytics are retained for 90 days. Firebase Analytics event records are retained for up to 14 months in accordance with Google's standard retention schedules.</li>
+    </ul>
 
     <p><strong>Step-by-Step Instructions to Delete All User Data:</strong></p>
     <ol>
-        <li><strong>Step 1 (In-App & Device Storage Deletion):</strong> On your Android device, open <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>Neo Gallery</strong> &rarr; <strong>Storage & Cache</strong> &rarr; tap <strong>"Clear Storage" / "Clear Data"</strong>. This permanently purges all on-device database records, cached thumbnails, favorites, and encrypted vault files.</li>
+        <li><strong>Step 1 (In-App & Device Storage Deletion):</strong> On your Android device, open <strong>Settings</strong> &rarr; <strong>Apps</strong> &rarr; <strong>Neo Gallery</strong> &rarr; <strong>Storage & Cache</strong> &rarr; tap <strong>"Clear Storage" / "Clear Data"</strong>. This permanently purges all on-device database records, cached thumbnails, favorites, and encrypted vault files immediately.</li>
         <li><strong>Step 2 (Complete Removal):</strong> Uninstall Neo Gallery from your device. This automatically deletes the isolated sandbox storage directory and all associated app data.</li>
-        <li><strong>Step 3 (Web-Based Data Deletion Request Without App Installation):</strong> If you have ever contacted our customer support team or submitted any inquiries, and wish to request the permanent deletion of your support correspondence and email records, you can submit a deletion request via our dedicated Web Portal at:
+        <li><strong>Step 3 (Customer Support Correspondence Deletion):</strong> If you have ever contacted our customer support team or submitted any inquiries, and wish to request the permanent deletion of your support correspondence and email records, you can submit a deletion request via our dedicated Web Portal at:
             <br>
             👉 <a href="https://mijanur85.github.io/neogallery-privacy/delete-data.html" target="_blank" rel="noopener"><strong>https://mijanur85.github.io/neogallery-privacy/delete-data.html</strong></a>
             <br>
-            Or send an email directly to <a href="mailto:neogallery.support@gmail.com?subject=Account%2FData%20Deletion%20Request">neogallery.support@gmail.com</a> with the subject line <em>"Data Deletion Request"</em>. All requests are processed within <strong>48 to 72 hours</strong>.
+            Or send an email directly to <a href="mailto:neogallery.support@gmail.com?subject=Account%2FData%20Deletion%20Request">neogallery.support@gmail.com</a> with the subject line <em>"Data Deletion Request"</em>. Customer support correspondence records are reviewed and purged within <strong>48 to 72 hours</strong>.
         </li>
     </ol>
 
