@@ -1,180 +1,33 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>User Data & Account Deletion Request - Neo Gallery</title>
-    <style>
-        :root {
-            --bg-color: #0b0f19;
-            --surface-color: #151d30;
-            --text-primary: #f8fafc;
-            --text-secondary: #94a3b8;
-            --accent-color: #38bdf8;
-            --border-color: #1e293b;
-        }
-
-        body {
-            font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-            background-color: var(--bg-color);
-            color: var(--text-primary);
-            margin: 0;
-            padding: 40px 20px;
-            display: flex;
-            justify-content: center;
-        }
-
-        .container {
-            max-width: 780px;
-            width: 100%;
-            background-color: var(--surface-color);
-            border-radius: 16px;
-            border: 1px solid var(--border-color);
-            padding: 40px;
-            box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.5);
-        }
-
-        .header {
-            border-bottom: 1px solid var(--border-color);
-            padding-bottom: 24px;
-            margin-bottom: 28px;
-        }
-
-        .app-badge {
-            display: inline-block;
-            background: rgba(56, 189, 248, 0.1);
-            color: var(--accent-color);
-            padding: 6px 14px;
-            border-radius: 9999px;
-            font-size: 13px;
-            font-weight: 600;
-            margin-bottom: 12px;
-        }
-
-        h1 {
-            font-size: 28px;
-            margin: 0 0 8px 0;
-            color: #ffffff;
-        }
-
-        .meta {
-            color: var(--text-secondary);
-            font-size: 14px;
-        }
-
-        .card {
-            background: rgba(56, 189, 248, 0.05);
-            border: 1px solid rgba(56, 189, 248, 0.2);
-            border-radius: 12px;
-            padding: 20px;
-            margin: 24px 0;
-        }
-
-        h2 {
-            font-size: 20px;
-            color: var(--accent-color);
-            margin-top: 32px;
-            margin-bottom: 12px;
-        }
-
-        p, li {
-            color: var(--text-secondary);
-            font-size: 15px;
-            line-height: 1.7;
-        }
-
-        strong {
-            color: var(--text-primary);
-        }
-
-        ul {
-            padding-left: 20px;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
-        }
-
-        a:hover {
-            text-decoration: underline;
-        }
-
-        .btn {
-            display: inline-block;
-            background: var(--accent-color);
-            color: #0b0f19;
-            font-weight: 600;
-            padding: 12px 24px;
-            border-radius: 8px;
-            margin-top: 16px;
-            text-decoration: none;
-        }
-
-        .btn:hover {
-            opacity: 0.9;
-            text-decoration: none;
-        }
-
-        .footer {
-            margin-top: 40px;
-            padding-top: 20px;
-            border-top: 1px solid var(--border-color);
-            text-align: center;
-            font-size: 13px;
-            color: #64748b;
-        }
-    </style>
-</head>
-<body>
-
-<div class="container">
-    <div class="header">
-        <span class="app-badge">Data Safety Compliance</span>
-        <h1>Data & Account Deletion Request</h1>
-        <div class="meta">Application: Neo Gallery &bull; Package: <code>com.neogallery.app</code></div>
-    </div>
-
-    <div class="card">
-        <h3 style="margin-top:0; color: #38bdf8;">Notice Regarding User Accounts</h3>
-        <p><strong>Neo Gallery operates entirely without user accounts or server-side logins.</strong> You do not need an account to use the app, and we never collect, store, or transmit your email address, passwords, or personal identity to remote servers.</p>
-    </div>
-
-    <h2>1. What Data Can Be Deleted?</h2>
-    <p>All photos, videos, encrypted vault files, album definitions, and app settings are stored locally on your device:</p>
-    <ul>
-        <li><strong>On-Device Media & Vault Items:</strong> Stored strictly in local device storage and app sandbox.</li>
-        <li><strong>App Settings & Preferences:</strong> Stored locally in Android DataStore.</li>
-        <li><strong>Support / Contact Records:</strong> If you sent an email to customer support, that communication thread may exist in our support mailbox.</li>
-    </ul>
-
-    <h2>2. How to Delete All Data Without Contacting Us</h2>
-    <p>Because your media and settings are stored locally on your phone, you have immediate and permanent control over all data:</p>
-    <ul>
-        <li><strong>Clear All App Data:</strong> Open Android <em>Settings &rarr; Apps &rarr; Neo Gallery &rarr; Storage & Cache &rarr; Clear Storage</em>. This immediately erases all local settings, encrypted vault databases, and cached indices.</li>
-        <li><strong>Uninstall Neo Gallery:</strong> Uninstalling the application completely purges all private application folders and database records from your device.</li>
-    </ul>
-
-    <h2>3. Request Deletion of Support Records (Web Request)</h2>
-    <p>If you have previously contacted our support team and wish to request the complete deletion of any email correspondence, support tickets, or diagnostic crash traces, please email us directly with the subject line <strong>"Data Deletion Request"</strong>:</p>
-
-    <p style="text-align: center; margin: 30px 0;">
-        <a class="btn" href="mailto:neogallery.support@gmail.com?subject=Data%20Deletion%20Request%20-%20Neo%20Gallery%20(com.neogallery.app)">Submit Data Deletion Request via Email</a>
-    </p>
-
-    <h2>4. Response Timeframe & Retention Details</h2>
-    <p>All customer support email correspondence deletion requests are reviewed and permanently processed within <strong>48 to 72 hours</strong>. We will send a confirmation response once the records have been purged. On-device media and vault files are erased instantly whenever you clear storage or uninstall the app. Third-party anonymous crash traces in Firebase are retained according to Google's standard lifecycle (90 days for Crashlytics, up to 14 months for Analytics).</p>
-
-    <h2>5. Official Links</h2>
-    <ul>
-        <li><strong>Privacy Policy:</strong> <a href="https://mijanur85.github.io/neogallery-privacy/">https://mijanur85.github.io/neogallery-privacy/</a></li>
-        <li><strong>Google Play Store:</strong> Neo Gallery (<code>com.neogallery.app</code>)</li>
-    </ul>
-
-    <div class="footer">
-        &copy; 2026 Neo Gallery (com.neogallery.app). All rights reserved.
-    </div>
-</div>
-
-</body>
-</html>
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><meta name="description" content="Remove local app data or request deletion of support correspondence."><meta name="theme-color" content="#172335"><title>Data deletion — Neo Gallery</title><link rel="canonical" href="https://mijanur85.github.io/neogallery-privacy/delete-data.html"><style>
+:root{color-scheme:light;--ink:#172335;--muted:#536277;--accent:#135d80;--line:#dbe4eb;--wash:#edf5f8}
+*{box-sizing:border-box}body{margin:0;background:#f5f7fa;color:var(--ink);font:16px/1.75 system-ui,-apple-system,"Segoe UI",sans-serif}
+a{color:var(--accent);text-underline-offset:3px;overflow-wrap:anywhere}a:hover{text-decoration-thickness:2px}a:focus-visible{outline:3px solid #b25314;outline-offset:4px}
+.wrap{max-width:1000px;margin:auto;padding:0 24px}header{background:#fff;border-bottom:1px solid var(--line)}.top{display:flex;gap:22px;justify-content:space-between;align-items:center;padding-block:22px}
+.brand{font-size:20px;font-weight:750;letter-spacing:-.6px;color:var(--ink);text-decoration:none;white-space:nowrap}.brand span{color:var(--accent)}nav{display:flex;gap:9px 20px;flex-wrap:wrap;font-size:14px}nav a[aria-current=page]{font-weight:750}
+main{margin:38px auto!important;background:#fff;border:1px solid var(--line);border-radius:20px;padding:42px!important;box-shadow:0 10px 35px #16253605}
+.eyebrow{text-transform:uppercase;font-size:12px;letter-spacing:2px;font-weight:750;color:var(--accent);margin:0 0 10px}h1{font-size:clamp(32px,6vw,48px);line-height:1.15;letter-spacing:-1.6px;margin:0 0 18px}h2{font-size:23px;line-height:1.35;letter-spacing:-.4px;margin:34px 0 12px}h3{font-size:18px;line-height:1.4;margin:22px 0 8px}p{margin:10px 0 16px}.meta{font-size:14px;color:var(--muted)}.intro{font-size:19px;color:var(--muted);max-width:740px}.notice{background:var(--wash);border-left:3px solid var(--accent);border-radius:0 12px 12px 0;padding:16px 20px;margin:24px 0}.notice p:last-child{margin-bottom:0}
+ul,ol{padding-left:25px}li{margin-bottom:9px}code{font-size:.9em;overflow-wrap:anywhere}dl{display:grid;grid-template-columns:150px 1fr;gap:5px 14px;margin:24px 0}dt{font-weight:650}dd{margin:0;overflow-wrap:anywhere}.cards{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px;margin:24px 0}.card{padding:22px;border:1px solid var(--line);border-radius:14px}.card h2,.card h3{margin-top:0}.card p{margin-bottom:0}.button{display:inline-block;background:var(--ink);color:white;text-decoration:none;font-weight:650;border-radius:9px;padding:12px 19px;margin:8px 10px 8px 0}.button.secondary{background:var(--wash);color:var(--accent)}.actions{margin:18px 0}.skip{position:absolute;top:-90px;left:16px;background:white;padding:8px;z-index:2}.skip:focus{top:8px}footer{font-size:13px;color:var(--muted);padding-bottom:30px!important}footer p{margin:6px 0}hr{border:0;border-top:1px solid var(--line);margin:30px 0}
+@media(max-width:640px){.wrap{padding:0 18px}.top{align-items:flex-start;flex-direction:column;gap:14px}main{margin:20px 12px!important;padding:25px 20px!important;border-radius:14px}.cards{grid-template-columns:1fr}dl{grid-template-columns:1fr;gap:2px}dd{margin-bottom:10px}h2{font-size:21px}nav{gap:10px 17px}}
+@media print{body{background:white}header,footer,.actions,.skip{display:none}main{border:0;box-shadow:none;margin:0!important;padding:0!important}h2,h3{break-after:avoid}.card,.notice{break-inside:avoid}}
+</style></head>
+<body><a class="skip" href="#main">Skip to content</a><header><div class="wrap top"><a class="brand" href="index.html">NEO<span> / </span>GALLERY</a><nav aria-label="Main navigation"><a href="index.html">Home</a><a href="privacy_policy.html">Privacy</a><a href="delete-data.html" aria-current="page">Delete data</a><a href="terms.html">Terms</a></nav></div></header>
+<main class="wrap" id="main"><p class="eyebrow">Neo Gallery · Android</p><h1>Data deletion</h1><p class="intro">Remove local app data or request deletion of support correspondence.</p>
+<p class="meta">Last updated: 7 October 2026 · <code>com.neogallery.app</code></p>
+<div class="notice"><strong>No Neo Gallery account is required.</strong><p>There is no app account to close. Use the steps below to remove device data or request deletion of support records. <strong>Uninstalling or clearing app data does not cancel a Google Play subscription.</strong></p></div>
+<h2>1. Decide what you want to delete</h2>
+<div class="cards"><section class="card"><h3>Ordinary photos and videos</h3><p>Shared gallery media and exported edits remain on the device after uninstall. Delete the files using Neo Gallery or another authorized gallery/file manager. Copies you shared or backed up through other services must be managed there.</p></section><section class="card"><h3>Vault and app-private data</h3><p>Vault files, app-managed recycle-bin copies, favourites, settings and caches are private app data. Restore or export any files you want to keep before clearing this data. We cannot recover lost vault data or keys.</p></section></div>
+<h2>2. Delete local app data yourself</h2>
+<ol><li>Restore/export any vault or recycle-bin files you wish to keep.</li><li>For individual files, use the app's delete and recycle-bin controls. Eligible expired bin entries are cleaned up when the app next runs its cleanup, not at a guaranteed time while it is closed.</li><li>To remove app-private data, open Android <strong>Settings → Apps → Neo Gallery → Storage &amp; cache → Clear storage / Clear data</strong>. Names vary by device.</li><li>Uninstalling Neo Gallery also removes its private app storage. Neither operation automatically erases ordinary shared gallery files, exported photos, support emails or records already held by Google services.</li></ol>
+<h2>3. Request deletion of support records</h2>
+<p>Email <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a> with the subject <strong>Data Deletion Request — Neo Gallery</strong>. Prefer the address you used to contact support. Mention the approximate correspondence date and which records you want deleted.</p>
+<div class="actions"><a class="button" href="mailto:neogallery.support@gmail.com?subject=Data%20Deletion%20Request%20%E2%80%94%20Neo%20Gallery">Open email deletion request</a></div>
+<p class="meta">This button opens your email app. The request is sent only when you send the email. If no email app opens, copy the address above into your preferred email service.</p>
+<p>Do not send a vault PIN, pattern, password, full payment-card details or unnecessary private photos. We may ask for limited information to verify the request. We review and respond within applicable legal deadlines; there is no guaranteed 48–72-hour permanent-erasure promise. We explain completion, any identification limits, and any records that must be retained for a legitimate legal or dispute-related reason.</p>
+<h2>4. Google service data and purchases</h2>
+<p>Advertising, Analytics, Crashlytics and Google Play records have separate retention and deletion processes. An email address alone may not identify a pseudonymous app installation or crash record. Contact us for assistance, and we will explain the available process rather than promise deletion of records we cannot identify or control. See <a href="privacy_policy.html">Privacy Policy, sections 2 and 5</a> and <a href="https://firebase.google.com/support/privacy">Firebase privacy information</a>.</p>
+<p>To stop subscription renewal, use <a href="https://play.google.com/store/account/subscriptions">Google Play subscriptions</a>. Cancel the Neo Gallery subscription before its next renewal. Access normally continues until the paid period ends. Deletion, uninstall and cancellation do not automatically request a refund; see <a href="https://support.google.com/googleplay/answer/2479637?hl=en">Google Play refund information</a>.</p>
+<h2>5. Useful links</h2>
+<ul><li><a href="privacy_policy.html">Privacy Policy</a></li><li><a href="terms.html">Terms of Service</a></li><li><a href="index.html">Neo Gallery homepage</a></li></ul>
+</main>
+<footer class="wrap"><p>© 2026 Neo Gallery Team · <code>com.neogallery.app</code></p><p>Support and privacy enquiries: <a href="mailto:neogallery.support@gmail.com">neogallery.support@gmail.com</a></p></footer></body></html>
